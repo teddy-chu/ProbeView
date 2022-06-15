@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_settings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name_settings" />
+
+    <ScrollView
+        android:id="@+id/scrollview_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_settings">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="70dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/textview_coil_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/textview_coil_position"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edittext_coil_position_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_coil_position_x"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_coil_position_y"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_coil_position" />
+
+            <EditText
+                android:id="@+id/edittext_coil_position_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_coil_position_y"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_coil_position_z"
+                app:layout_constraintStart_toEndOf="@+id/edittext_coil_position_x"
+                app:layout_constraintTop_toBottomOf="@+id/textview_coil_position" />
+
+            <EditText
+                android:id="@+id/edittext_coil_position_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_coil_position_z"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_coil_angle_x"
+                app:layout_constraintStart_toEndOf="@+id/edittext_coil_position_y"
+                app:layout_constraintTop_toBottomOf="@+id/textview_coil_position" />
+
+            <TextView
+                android:id="@+id/textview_coil_angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/textview_coil_angle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edittext_coil_position_x" />
+
+            <EditText
+                android:id="@+id/edittext_coil_angle_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_coil_angle_x"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_coil_angle_y"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_coil_angle" />
+
+            <EditText
+                android:id="@+id/edittext_coil_angle_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_coil_angle_y"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_coil_angle_z"
+                app:layout_constraintStart_toEndOf="@+id/edittext_coil_angle_x"
+                app:layout_constraintTop_toBottomOf="@+id/textview_coil_angle" />
+
+            <EditText
+                android:id="@+id/edittext_coil_angle_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_coil_angle_z"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_probe_position_x"
+                app:layout_constraintStart_toEndOf="@+id/edittext_coil_angle_y"
+                app:layout_constraintTop_toBottomOf="@+id/textview_coil_angle" />
+
+            <TextView
+                android:id="@+id/textview_probe_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/textview_probe_position"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edittext_coil_angle_x" />
+
+            <EditText
+                android:id="@+id/edittext_probe_position_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_probe_position_x"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_probe_position_y"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_probe_position" />
+
+            <EditText
+                android:id="@+id/edittext_probe_position_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_probe_position_y"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_probe_position_z"
+                app:layout_constraintStart_toEndOf="@+id/edittext_probe_position_x"
+                app:layout_constraintTop_toBottomOf="@+id/textview_probe_position" />
+
+            <EditText
+                android:id="@+id/edittext_probe_position_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_probe_position_z"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_probe_angle_x"
+                app:layout_constraintStart_toEndOf="@+id/edittext_probe_position_y"
+                app:layout_constraintTop_toBottomOf="@+id/textview_probe_position" />
+
+            <TextView
+                android:id="@+id/textview_probe_angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/textview_probe_angle"
+                app:layout_constraintHorizontal_bias="0.283"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edittext_probe_position_x" />
+
+            <EditText
+                android:id="@+id/edittext_probe_angle_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_probe_angle_x"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_probe_angle_y"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_probe_angle" />
+
+            <EditText
+                android:id="@+id/edittext_probe_angle_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_probe_angle_y"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_probe_angle_z"
+                app:layout_constraintStart_toEndOf="@+id/edittext_probe_angle_x"
+                app:layout_constraintTop_toBottomOf="@+id/textview_probe_angle" />
+
+            <EditText
+                android:id="@+id/edittext_probe_angle_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:ems="4"
+                android:hint="@string/tips_probe_angle_z"
+                android:importantForAutofill="no"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:maxLength="6"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_scan_image_server"
+                app:layout_constraintStart_toEndOf="@+id/edittext_probe_angle_y"
+                app:layout_constraintTop_toBottomOf="@+id/textview_probe_angle" />
+
+            <TextView
+                android:id="@+id/textview_scan_image_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/textview_scan_image_server"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edittext_probe_angle_x" />
+
+            <EditText
+                android:id="@+id/edittext_scan_image_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:ems="15"
+                android:importantForAutofill="no"
+                android:inputType="textUri"
+                android:maxLength="100"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_power_control_server"
+                android:hint="@string/tips_scan_image_server"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_scan_image_server" />
+
+            <TextView
+                android:id="@+id/textview_power_control_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/textview_power_control_server"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edittext_scan_image_server" />
+
+            <EditText
+                android:id="@+id/edittext_power_control_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:ems="15"
+                android:importantForAutofill="no"
+                android:inputType="textUri"
+                android:maxLength="100"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:nextFocusDown="@id/edittext_coil_position_x"
+                android:hint="@string/tips_power_control_server"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_power_control_server" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
